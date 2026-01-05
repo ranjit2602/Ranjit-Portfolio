@@ -89,8 +89,6 @@ with st.sidebar:
     st.title("Navigation")
     st.info("Select the **Projects** page in the sidebar to view technical logs for PowerPedal™ and the Wheelchair Attachment.")
     st.markdown("---")
-    st.markdown("### 🛠️ Tech Stack")
-    st.code("NX12 CAD\nPython\nEmbedded C\nPCB Design", language="text")
 
 # --- MAIN PROFILE SECTION ---
 col_img, col_info = st.columns([1, 2.5], gap="large")
