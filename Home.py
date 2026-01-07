@@ -120,21 +120,6 @@ with col_info:
         </p>
     """, unsafe_allow_html=True)
     
-    # Key Stats Table
-    st.markdown("""
-    <table class="stats-table">
-        <tr>
-            <th>IP Filings</th>
-            <th>Cost Reduction</th>
-            <th>Validation</th>
-        </tr>
-        <tr>
-            <td>2 (1 Granted)</td>
-            <td>40%</td>
-            <td>IISc & IIMB</td>
-        </tr>
-    </table>
-    """, unsafe_allow_html=True)
 
 st.markdown("<br><hr>", unsafe_allow_html=True)
 

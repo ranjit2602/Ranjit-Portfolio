@@ -74,23 +74,81 @@ with st.sidebar:
     st.markdown("### 🔍 PROJECT LOGS")
     selection = st.radio(
         "Select Log:",
-        ["Wheelchair: Full-Cycle Development", "PowerPedal™: Optical Sensing", "HMI: Interface Engineering", "Digital: Data Infrastructure", "Skateboard: Mechatronics Capstone"]
+        [
+            "Mid-Drive: Drivetrain Innovation", 
+            "Wheelchair: Full-Cycle Development", 
+            "PowerPedal™: Optical Sensing", 
+            "HMI: Interface Engineering", 
+            "Digital: Data Infrastructure", 
+            "Skateboard: Mechatronics Capstone"
+        ]
     )
+    
+    st.markdown("---")
+    st.markdown("### 📱 NAVIGATION GUIDE")
+    st.info("""
+    **Desktop:** Use the radio buttons above.
+    **Mobile:** Tap the **'>'** in the top left to open this project menu. 
+    **Viewing:** Scroll down within each log to see technical specs and galleries.
+    """)
+
+# =========================================================================
+# 00. MID-DRIVE: THE STRATEGIC PIVOT
+# =========================================================================
+if selection == "Mid-Drive: Drivetrain Innovation":
+    st.markdown('<h1 class="eng-title">Mid-Drive Propulsion: The Strategic Pivot</h1>', unsafe_allow_html=True)
+    
+    st.markdown('<div class="impact-box">', unsafe_allow_html=True)
+    st.write("""
+    **The "Intel Inside" Strategy:** While competitors focused on frame-building and branding, we realized 
+    no one in India was developing proprietary drivetrains. We pivoted to become the first in the country 
+    to build a homegrown mid-drive, turning our competitors into our customers.
+    """)
+    st.markdown('</div>', unsafe_allow_html=True)
+    st.write("")
+
+    col1, col2 = st.columns([1.5, 1], gap="large")
+    
+    with col1:
+        st.markdown('<span class="tech-spec-header">// SYSTEM ARCHITECTURE</span>', unsafe_allow_html=True)
+        st.image("mid-drive1.jpeg")
+        
+        img_col1, img_col2 = st.columns(2)
+        with img_col1:
+            st.image("mid-drive2.jpeg")
+        with img_col2:
+            st.image("mid-drive2.jpeg")
+
+    with col2:
+        st.markdown('<div class="eng-card">', unsafe_allow_html=True)
+        st.markdown('<span class="tech-spec-header">My Engineering Contributions:</span>', unsafe_allow_html=True)
+        st.write("""
+        
+        - **Requirement Math:** Calculated torque constants ($K_t$) and voltage constants ($K_v$) for Indian road gradients.
+        - **Gearing Logic:** Optimized reduction ratios to maximize motor efficiency at low speeds.
+        - **Custom Casing:** Designed the entire enclosure in NX for IP67 sealing and high heat dissipation.
+        - **Vendor Management:** Spec'd and sourced custom motor windings from 3rd party partners.
+        """)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+        st.markdown('<div class="eng-card">', unsafe_allow_html=True)
+        st.markdown('<span class="tech-spec-header">RECOGNITION</span>', unsafe_allow_html=True)
+        st.success("Project funded and validated by the **IISc Design Clinic Scheme grant**.")
+        st.markdown('</div>', unsafe_allow_html=True)
 
 # =========================================================================
 # 01. WHEELCHAIR: TOTAL PROJECT OWNERSHIP
 # =========================================================================
-if selection == "Wheelchair: Full-Cycle Development":
+elif selection == "Wheelchair: Full-Cycle Development":
     st.markdown('<h1 class="eng-title">Wheelchair System: Full-Cycle Engineering</h1>', unsafe_allow_html=True)
     
-    # HERO SECTION
     col1, col2 = st.columns([1.5, 1], gap="large")
     with col1:
         st.video("Wheelchair attachment Version 1.mp4")
         st.caption("Functional validation in real-world residential environments.")
     with col2:
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
-        st.markdown('<span class="tech-spec-header">// TOTAL PROJECT OWNERSHIP</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tech-spec-header">TOTAL PROJECT OWNERSHIP</span>', unsafe_allow_html=True)
         st.write("""
         I maintained **complete end-to-end responsibility** for this system. This wasn't just a design exercise; I led:
         - **Primary Field Research:** Identifying core mobility barriers.
@@ -101,7 +159,6 @@ if selection == "Wheelchair: Full-Cycle Development":
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
-    # VERSION 1 TECHNICALS
     col3, col4 = st.columns([1, 1.2], gap="large")
     with col3:
         st.image("Wheelchair.gif", use_container_width=True)
@@ -120,7 +177,6 @@ if selection == "Wheelchair: Full-Cycle Development":
 
     st.markdown("<hr>", unsafe_allow_html=True)
 
-    # VERSION 2: THE ENGINEERING LEAP
     st.markdown('<span class="tech-spec-header">// STAGE 2: ADVANCED OPTIMIZATION (VERSION 2)</span>', unsafe_allow_html=True)
     col5, col6, col7 = st.columns([1, 1, 1], gap="small")
     with col5:
@@ -140,8 +196,6 @@ if selection == "Wheelchair: Full-Cycle Development":
         st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
-
-    # POSTER & IMPACT
     st.image("Wheelchair flyer.png", use_container_width=True)
     st.markdown("""
     <div class="impact-box">
@@ -150,15 +204,11 @@ if selection == "Wheelchair: Full-Cycle Development":
     """, unsafe_allow_html=True)
 
 # =========================================================================
-# OTHER SECTIONS (Retained exactly as requested)
-# =========================================================================
-# =========================================================================
-# 02. POWERPEDAL™: PATENTED OPTICAL TORQUE SENSING
+# 02. POWERPEDAL™
 # =========================================================================
 elif selection == "PowerPedal™: Optical Sensing":
     st.markdown('<h1 class="eng-title">PowerPedal™ <span class="patent-tag">Patented</span></h1>', unsafe_allow_html=True)
     
-    # SYSTEM INTENT SECTION
     col1, col2 = st.columns([1, 1.4], gap="large")
     with col1:
         st.video("Powerpedal Testing.mp4")
@@ -185,13 +235,10 @@ elif selection == "PowerPedal™: Optical Sensing":
         st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
-
-    # TECHNICAL VISUALS
     col3, col4 = st.columns(2, gap="medium")
     with col3:
-        st.image("PowerSense.png", caption="CAD Section: Mechanical Embodiment of Optical Sensing Path")
+        st.image("PowerSense.png")
     with col4:
-        # 
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
         st.markdown('<span class="tech-spec-header">// PATENT ALIGNMENT</span>', unsafe_allow_html=True)
         st.write("""
@@ -199,10 +246,12 @@ elif selection == "PowerPedal™: Optical Sensing":
         My work provided the physical embodiment required to translate pedal torsion into high-fidelity digital signals.
         """)
         st.markdown('</div>', unsafe_allow_html=True)
+
+# =========================================================================
+# 03. HMI
+# =========================================================================
 elif selection == "HMI: Interface Engineering":
     st.markdown('<h1 class="eng-title">HMI: Integrated E-Bike Control Interface</h1>', unsafe_allow_html=True)
-    
-    # OVERVIEW BOX
     st.markdown('<div class="eng-card">', unsafe_allow_html=True)
     st.markdown('<span class="tech-spec-header">// CORE OBJECTIVE</span>', unsafe_allow_html=True)
     st.write("""
@@ -213,7 +262,6 @@ elif selection == "HMI: Interface Engineering":
     st.markdown('</div>', unsafe_allow_html=True)
 
     col1, col2 = st.columns([1, 1], gap="large")
-    
     with col1:
         st.image("HMI _ design.jpeg")
         st.caption("CAD Design: Industrial design of the enclosure focusing on ergonomic button reach and component housing.")
@@ -227,7 +275,6 @@ elif selection == "HMI: Interface Engineering":
         """, unsafe_allow_html=True)
         st.markdown('</ul>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
-
     with col2:
         st.image("HMI_3d printed.jpeg")
         st.caption("Functional Prototype: 3D-printed unit used to validate hand ergonomics and handlebar fitment.")
@@ -242,19 +289,11 @@ elif selection == "HMI: Interface Engineering":
         st.markdown('</ul>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
 
-    st.markdown("<hr>", unsafe_allow_html=True)
-    
-    st.markdown('<div class="eng-card">', unsafe_allow_html=True)
-    st.markdown('<span class="tech-spec-header">// SUMMARY</span>', unsafe_allow_html=True)
-    st.write("""
-    Designed and 3D-printed an integrated e-bike HMI enclosure consolidating throttle assistance, 
-    assist-level switching, battery indication, and horn controls into a single ergonomic unit. 
-    This project demonstrates a full transition from CAD form-finding to physical validation through rapid prototyping.
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
+# =========================================================================
+# 04. DIGITAL
+# =========================================================================
 elif selection == "Digital: Data Infrastructure":
     st.markdown('<h1 class="eng-title">Digital Infrastructure: Data Visualization</h1>', unsafe_allow_html=True)
-    
     st.markdown('<div class="eng-card">', unsafe_allow_html=True)
     st.markdown('<span class="tech-spec-header">// CORE OBJECTIVE</span>', unsafe_allow_html=True)
     st.write("""
@@ -265,12 +304,11 @@ elif selection == "Digital: Data Infrastructure":
     st.markdown('</div>', unsafe_allow_html=True)
 
     col1, col2 = st.columns([1.2, 1], gap="large")
-    
     with col1:
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
         st.markdown('<span class="tech-spec-header">// INTERACTIVE PITCH DECK (Differentiator)</span>', unsafe_allow_html=True)
         st.write("""
-        Instead of traditional presentation decks, I designed and built a <b>live dashboard-based pitch system</b>. 
+        Instead of traditional presentation decks, I designed and built a live dashboard-based pitch system. 
         This allowed stakeholders to:
         - Explore performance metrics and system comparisons dynamically.
         - Verify engineering claims through real-time data transparency.
@@ -278,16 +316,6 @@ elif selection == "Digital: Data Infrastructure":
         """)
         st.link_button("🚀 Launch Pitch Dashboard", "https://powerpedal-pitch-dashboard.streamlit.app/")
         st.markdown('</div>', unsafe_allow_html=True)
-        
-        st.markdown('<div class="eng-card">', unsafe_allow_html=True)
-        st.markdown('<span class="tech-spec-header">// TESTING & PERFORMANCE ANALYSIS</span>', unsafe_allow_html=True)
-        st.write("""
-        Built custom dashboards to visualize experimental outcomes and system trends, enabling 
-        faster design validation and data-backed engineering decisions.
-        """)
-        st.link_button("📊 View Engineering Dashboard", "https://powerpedaltestdashboard-4tmrensx9crg9j7ezjytog.streamlit.app/")
-        st.markdown('</div>', unsafe_allow_html=True)
-
     with col2:
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
         st.markdown('<span class="tech-spec-header">// WEB ARCHITECTURE & VISIBILITY</span>', unsafe_allow_html=True)
@@ -297,20 +325,12 @@ elif selection == "Digital: Data Infrastructure":
         """)
         st.link_button("🌐 Visit Switch Mobility", "https://www.switchmobility.in/")
         st.markdown('</div>', unsafe_allow_html=True)
-        
-        
 
-    st.markdown("<hr>", unsafe_allow_html=True)
-    st.markdown('<div class="eng-card">', unsafe_allow_html=True)
-    st.markdown('<span class="tech-spec-header">// SUMMARY</span>', unsafe_allow_html=True)
-    st.write("""
-    Designed and built a product website and interactive dashboards for testing analysis and investor pitching, 
-    replacing static storytelling with live, transparent data visualization.
-    """)
-    st.markdown('</div>', unsafe_allow_html=True)
+# =========================================================================
+# 05. SKATEBOARD (CAPSTONE)
+# =========================================================================
 else:
     st.markdown('<h1 class="eng-title">Capstone: Electric Propulsion & Control</h1>', unsafe_allow_html=True)
-    
     col1, col2 = st.columns([1.4, 1], gap="large")
     with col1:
         st.video("Electric Skateboard.mp4")
@@ -325,7 +345,6 @@ else:
         """, unsafe_allow_html=True)
         st.markdown('</ul>', unsafe_allow_html=True)
         st.markdown('</div>', unsafe_allow_html=True)
-        
 
     st.markdown("""
     <div class="impact-box">
