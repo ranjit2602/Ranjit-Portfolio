@@ -306,16 +306,26 @@ elif selection == "Digital: Data Infrastructure":
     col1, col2 = st.columns([1.2, 1], gap="large")
     with col1:
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
-        st.markdown('<span class="tech-spec-header">// INTERACTIVE PITCH DECK (Differentiator)</span>', unsafe_allow_html=True)
+        st.markdown('<span class="tech-spec-header">// INTERACTIVE PITCH & TEST DASHBOARD</span>', unsafe_allow_html=True)
         st.write("""
-        Instead of traditional presentation decks, I designed and built a live dashboard-based pitch system. 
-        This allowed stakeholders to:
-        - Explore performance metrics and system comparisons dynamically.
-        - Verify engineering claims through real-time data transparency.
-        - Engage with an evidence-driven narrative rather than marketing claims.
+        I designed and built a **live dashboard-based system** that serves as both a pitch deck and an engineering validator. 
+        It allows us and OEMs to:
+        - **Analyze real-time results:** View performance data and engineering claims dynamically.
+        - **Stakeholder Transparency:** Provide evidence-driven narratives rather than static marketing slides.
+        - **Explore Metrics:** Dive deep into market analysis and live financial projections.
         """)
-        st.link_button("🚀 Launch Pitch Dashboard", "https://powerpedal-pitch-dashboard.streamlit.app/")
+        st.link_button("🚀 Launch Pitch & Test Dashboard", "https://powerpedal-pitch-dashboard.streamlit.app/")
         st.markdown('</div>', unsafe_allow_html=True)
+        
+        st.markdown('<div class="eng-card">', unsafe_allow_html=True)
+        st.markdown('<span class="tech-spec-header">// ENGINEERING PERFORMANCE ANALYSIS</span>', unsafe_allow_html=True)
+        st.write("""
+        Custom dashboards built to visualize experimental outcomes, enabling faster design validation 
+        and data-backed engineering decisions.
+        """)
+        st.link_button("📊 View Performance Dashboard", "https://powerpedaltestdashboard-4tmrensx9crg9j7ezjytog.streamlit.app/")
+        st.markdown('</div>', unsafe_allow_html=True)
+
     with col2:
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
         st.markdown('<span class="tech-spec-header">// WEB ARCHITECTURE & VISIBILITY</span>', unsafe_allow_html=True)
@@ -325,7 +335,6 @@ elif selection == "Digital: Data Infrastructure":
         """)
         st.link_button("🌐 Visit Switch Mobility", "https://www.switchmobility.in/")
         st.markdown('</div>', unsafe_allow_html=True)
-
 # =========================================================================
 # 05. SKATEBOARD (CAPSTONE)
 # =========================================================================
