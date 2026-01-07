@@ -171,16 +171,24 @@ with s2:
             </ul>
         </div>
     """, unsafe_allow_html=True)
-    # --- NAVIGATION GUIDE FOR PROJECTS ---
+# --- NAVIGATION GUIDE FOR PROJECTS ---
 st.markdown("<br>", unsafe_allow_html=True)
 st.markdown("""
-    <div style="background: #1c2128; border: 2px dashed #00C6FF; padding: 25px; border-radius: 12px;">
+    <div style="background: #1c2128; border: 2px dashed #00C6FF; padding: 25px; border-radius: 12px; border-left: 8px solid #00C6FF;">
         <h2 style="color: #00C6FF; margin-top: 0; font-family: 'Inter', sans-serif;">🚀 How to View My Projects</h2>
-        <p style="color: #ffffff; font-size: 1.1rem;">
+        <p style="color: #ffffff; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px;">
+            There are multiple engineering projects documented in this portfolio.
+        </p>
+        <p style="color: #c9d1d9; font-size: 1.1rem; margin-bottom: 15px;">
+            Please <b>select each project</b> from the menu to view its specific CAD breakdowns, technical specs, and functional videos in detail.
         </p>
         <ul style="color: #ffffff; font-size: 1.05rem; line-height: 1.8;">
             <li><b>Desktop:</b> Use the <b>Selection Menu</b> located in the sidebar on the left.</li>
             <li><b>Mobile:</b> Tap the <b>">" (Sidebar Arrow)</b> at the top left of your screen to open the project list.</li>
         </ul>
+        <div style="margin-top: 15px; color: #00C6FF; font-weight: bold; font-family: 'Inter', sans-serif;">
+            ⬅️ Select a Log from the Sidebar to see all projects.
+        </div>
     </div>
 """, unsafe_allow_html=True)
+st.markdown("<br><br>", unsafe_allow_html=True)
