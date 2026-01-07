@@ -2,7 +2,7 @@ import streamlit as st
 
 # --- CONFIGURATION ---
 st.set_page_config(
-    page_title="Ranjit B C | Mechatronics Portfolio",
+    page_title="Ranjit B C | Portfolio",
     page_icon="⚙️",
     layout="wide"
 )
@@ -113,10 +113,10 @@ with col_info:
     st.markdown(f"""
         <p style="color: white; font-size: 1.1rem;">
         Driven by a passion for transforming nascent ideas into validated, <b>market-ready electromechanical products</b>. 
-        I have <b>six years</b> of comprehensive experience in full-stack hardware development, spanning from 3D modeling in <b>NX12</b> and custom PCB design to factory execution and final product deployment.
+        I have <b>six years</b> of comprehensive experience in full-stack hardware development, spanning from 3D modeling and custom PCB design to factory execution and final product deployment.
         <br><br>
         My focus is on <b>Mechatronics and Advanced Systems</b>, with a proven ability to lead innovation, resulting in 
-        <b>patented systems</b> supported by institutional validation from <b>IISc & IIMB</b>. 
+        <b>patented systems</b> 
         </p>
     """, unsafe_allow_html=True)
     
