@@ -95,6 +95,8 @@ col_img, col_info = st.columns([1, 2.5], gap="large")
 
 with col_img:
     st.image("ranjit_profile.jpg", use_container_width=True)
+
+    
     
     # LINKS ON MAIN PAGE
     st.markdown("""
@@ -123,6 +125,8 @@ with col_info:
 
 st.markdown("<br><hr>", unsafe_allow_html=True)
 
+
+st.markdown("<br><br>", unsafe_allow_html=True)
 # --- SKILLS MATRIX ---
 st.header("🛠️ Core Technical Expertise")
 
@@ -167,3 +171,16 @@ with s2:
             </ul>
         </div>
     """, unsafe_allow_html=True)
+    # --- NAVIGATION GUIDE FOR PROJECTS ---
+st.markdown("<br>", unsafe_allow_html=True)
+st.markdown("""
+    <div style="background: #1c2128; border: 2px dashed #00C6FF; padding: 25px; border-radius: 12px;">
+        <h2 style="color: #00C6FF; margin-top: 0; font-family: 'Inter', sans-serif;">🚀 How to View My Projects</h2>
+        <p style="color: #ffffff; font-size: 1.1rem;">
+        </p>
+        <ul style="color: #ffffff; font-size: 1.05rem; line-height: 1.8;">
+            <li><b>Desktop:</b> Use the <b>Selection Menu</b> located in the sidebar on the left.</li>
+            <li><b>Mobile:</b> Tap the <b>">" (Sidebar Arrow)</b> at the top left of your screen to open the project list.</li>
+        </ul>
+    </div>
+""", unsafe_allow_html=True)
