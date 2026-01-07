@@ -87,7 +87,7 @@ st.markdown(
 # --- SIDEBAR (NAVIGATION ONLY) ---
 with st.sidebar:
     st.title("Navigation")
-    st.info("Select the **Projects** page in the sidebar to view technical logs for PowerPedal™ and the Wheelchair Attachment.")
+    st.info("Select the **Projects** page in the sidebar to view technical logs")
     st.markdown("---")
 
 # --- MAIN PROFILE SECTION ---
