@@ -206,6 +206,9 @@ elif selection == "Wheelchair: Full-Cycle Development":
 # =========================================================================
 # 02. POWERPEDAL™
 # =========================================================================
+# =========================================================================
+# 02. POWERPEDAL™
+# =========================================================================
 elif selection == "PowerPedal™: Optical Sensing":
     st.markdown('<h1 class="eng-title">PowerPedal™ <span class="patent-tag">Patented</span></h1>', unsafe_allow_html=True)
     
@@ -235,9 +238,14 @@ elif selection == "PowerPedal™: Optical Sensing":
         st.markdown('</div>', unsafe_allow_html=True)
 
     st.markdown("<hr>", unsafe_allow_html=True)
+    
+    # --- ADDED SENSOR EVOLUTION IMAGE ---
+    st.markdown('<span class="tech-spec-header">// DESIGN EVOLUTION</span>', unsafe_allow_html=True)
+    st.image("Sensor-evolution.jpeg", caption="Evolution of the Torque Sensing Unit: From PoC to Production-Ready Metrology", use_container_width=True)
+    
     col3, col4 = st.columns(2, gap="medium")
     with col3:
-        st.image("PowerSense.png")
+        st.image("PowerSense.png", caption="CAD Section: Mechanical Embodiment of Optical Sensing Path")
     with col4:
         st.markdown('<div class="eng-card">', unsafe_allow_html=True)
         st.markdown('<span class="tech-spec-header">// PATENT ALIGNMENT</span>', unsafe_allow_html=True)
@@ -246,7 +254,6 @@ elif selection == "PowerPedal™: Optical Sensing":
         My work provided the physical embodiment required to translate pedal torsion into high-fidelity digital signals.
         """)
         st.markdown('</div>', unsafe_allow_html=True)
-
 # =========================================================================
 # 03. HMI
 # =========================================================================
